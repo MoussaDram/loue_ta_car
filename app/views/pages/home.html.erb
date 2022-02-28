@@ -1,2 +1,81 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('mercedes.jpeg')%>">
+        <div class="container">
+          <h1>Louez la voiture <strong>de votre rêve</strong> à <strong>des prix lowcoast</strong>!</h1>
+          <p>Votre confort et votre satisfaction est notre raison d'être .</p>
+          <%= link_to "Toutes nos voitures", cars_path, class: "btn btn-flat" %>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+
+      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('bmw.jpg')%>">
+        <div class="container">
+          <h1>Louez la voiture <strong>de votre rêve</strong> à <strong>des prix lowcoast</strong>!</h1>
+          <p>Votre confort et votre satisfaction est notre raison d'être .</p>
+          <%= link_to "Toutes nos voitures", cars_path, class: "btn btn-flat" %>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('clas.jpg')%>">
+        <div class="container">
+         <h1>Louez la voiture <strong>de votre rêve</strong> à <strong>des prix lowcoast</strong>!</h1>
+          <p>Votre confort et votre satisfaction est notre raison d'être .</p>
+          <%= link_to "Toutes nos voitures", cars_path, class: "btn btn-flat" %>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= asset_path('cla.jpg')%>">
+        <div class="container">
+          <h1>Louez la voiture <strong>de votre rêve</strong> à <strong>des prix lowcoast</strong>!</h1>
+          <p>Votre confort et votre satisfaction est notre raison d'être .</p>
+          <%= link_to "Toutes nos voitures", cars_path, class: "btn btn-flat" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="container">
+  <div class="d-flex justify-content-around">
+    <div class="card" style="width: 18rem;">
+      <%= image_tag "cla.jpg", height: 200%>
+
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Voiture très confortable</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <%= image_tag "bmw.jpg", height: 200 %>
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <%= image_tag "clas.jpg", height: 200 %>
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>

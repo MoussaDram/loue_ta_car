@@ -1,20 +1,45 @@
-<div class="container py-5">
-  <div class="row">
-    <div class="col-12 ">
-      <div class="bg-white rounded p-3 shadow">
+
+<div class="py-5"></div>
+
+<div class="container">
+
+      <div >
         <h1>Tous nos voitures de locations</h1>
         <%= link_to "Add a new car", new_car_path %>
         <br>
         <% @cars.each do |car| %>
-          <h3><%= car.brand %></h3>
-          <p><%= car.model %></p>
-          <p><%= car.year %></p>
-          <p><%= car.address %></p>
-          <p><%= car.description %></p>
-          <p><%= car.price %><span>€</span></p>
-          <%= link_to "Aller voir", car_path(car) %>
+          <div class="container">
+            <div class="d-flex justify-content-around">
+
+            <div class="col">
+                <div class="card">
+                  <div class="card-body">
+
+                    <h3><%= car.brand %></h3>
+                    <p><%= car.model %></p>
+                    <p><%= car.year %></p>
+                    <p><%= car.address %></p>
+                    <p><%= car.description %></p>
+                    <p><%= car.price %><span>€</span></p>
+                    <%= link_to "Aller voir", car_path(car), class: "btn btn-primary" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         <% end %>
       </div>
-    </div>
-  </div>
+
 </div>
+
+<div class="container">
+  <div class="d-flex justify-content-around">
+    <div class="card" style="width: 18rem;">
+      <%= image_tag "cla.jpg", height: 200%>
+
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Voiture très confortable</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>

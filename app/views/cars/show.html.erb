@@ -13,6 +13,10 @@
         <%= link_to "Modifier", edit_car_path(@car) %>
         <br>
         <%= link_to "Delete", car_path(@car), method: :delete, data: { confirm: "Are you sure?"} %>
+        <br>
+        <%= link_to "Réservé", new_car_booking_path(@car) %>
+        <br>
+        <%= link_to "Mes réservations", bookings_path %>
       </div>
     </div>
   </div>
