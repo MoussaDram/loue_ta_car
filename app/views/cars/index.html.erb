@@ -7,7 +7,6 @@
         <h1>Tous nos voitures de locations</h1>
         <%= link_to "Add a new car", new_car_path %>
         <br>
-                  <%= cl_image_tag "https://res.cloudinary.com/mussadrame/image/upload/v1646037847/pexels-mike-4223875_bqognh.jpg", alt: "vehicle", width: 400, height: 300, crop: :fill %>
         <% @cars.each do |car| %>
           <div class="container">
             <div class="d-flex justify-content-around">
@@ -15,7 +14,9 @@
             <div class="col">
                 <div class="card">
                   <div class="card-body">
-
+                  <% car.photos.each do |photo| %>
+          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
                     <h3><%= car.brand %></h3>
                     <p><%= car.model %></p>
                     <p><%= car.year %></p>
