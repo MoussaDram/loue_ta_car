@@ -1,10 +1,11 @@
+<div class="py-5"></div>
 <div class="container py-5">
   <div class="row">
     <div class="col-12 ">
       <div class="bg-white rounded p-3 shadow">
-        <% @car.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-        <% end %>
+
+          <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
+
         <h3><%= @car.brand %></h3>
         <p><%= @car.model %></p>
         <p><%= @car.year %></p>
@@ -18,8 +19,7 @@
         <%= link_to "Delete", car_path(@car), method: :delete, data: { confirm: "Are you sure?"} %>
         <br>
         <%= link_to "Réservé", new_car_booking_path(@car) %>
-        <br>
-        <%= link_to "Mes réservations", bookings_path %>
+
       </div>
     </div>
   </div>

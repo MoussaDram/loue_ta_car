@@ -1,35 +1,21 @@
 
 <div class="py-5"></div>
-
 <div class="container">
-
-      <div >
-        <h1>Tous nos voitures de locations</h1>
-        <%= link_to "Add a new car", new_car_path %>
-        <br>
-        <% @cars.each do |car| %>
-          <div class="container">
-            <div class="d-flex justify-content-around">
-
-            <div class="col">
-                <div class="card">
-                  <div class="card-body">
-                  <% car.photos.each do |photo| %>
-          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-        <% end %>
-                    <h3><%= car.brand %></h3>
-                    <p><%= car.model %></p>
-                    <p><%= car.year %></p>
-                    <p><%= car.address %></p>
-                    <p><%= car.description %></p>
-                    <p><%= car.price %><span>€</span></p>
-                    <%= link_to "Aller voir", car_path(car), class: "btn btn-primary" %>
-                  </div>
-                </div>
-              </div>
-            </div>
+  <h1>Toutes nos voitures de locations</h1>
+  <%= link_to "Add a new car", new_car_path %>
+  <div class="py-5"></div>
+    <% @cars.each do |car| %>
+        <div class="card-product" >
+          <%= cl_image_tag car.photo.key,  class:"card-img" %>
+          <div class="card-product-infos">
+            <h3><%= car.brand %></h3>
+            <p><%= car.model %></p>
+            <p><%= car.year %></p>
+            <p><%= car.address %></p>
+            <p><%= car.description %></p>
+            <p><%= car.price %><span>€</span></p>
+            <%= link_to "Aller voir", car_path(car), class: "btn btn-primary" %>
           </div>
-        <% end %>
-      </div>
-
+        </div>
+      <% end %>
 </div>
